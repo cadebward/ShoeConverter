@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ShoeConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,8 +16,94 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter US Shoe size " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A9A-ij-Bq3">
+                                <rect key="frame" x="16" y="58" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Men Shoe Conversion" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMu-Io-7wU">
+                                <rect key="frame" x="16" y="29" width="170" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Use whole numbers only" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7GX-wU-IMY">
+                                <rect key="frame" x="16" y="243" width="189" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Converted Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YD-Oa-NXS">
+                                <rect key="frame" x="16" y="96" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnW-uJ-BaW">
+                                <rect key="frame" x="538" y="20" width="55" height="30"/>
+                                <state key="normal" title="Convert">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnConvert_TouchUpInside:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qeB-we-Yg8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Women's Shose Conversion" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZO3-hc-gC5">
+                                <rect key="frame" x="16" y="147" width="217" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter US Shoe size" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N3k-En-blr">
+                                <rect key="frame" x="16" y="176" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Converted Label for women's shoe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3X-hJ-NlW">
+                                <rect key="frame" x="16" y="214" width="269" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXz-KA-Nhp">
+                                <rect key="frame" x="538" y="143" width="55" height="30"/>
+                                <state key="normal" title="Convert">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnConvertWomen_TouchUpInside:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1Nn-YA-0rQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gMu-Io-7wU" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="15" id="BMj-oD-zbc"/>
+                            <constraint firstItem="A9A-ij-Bq3" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" constant="5" id="BjV-if-vPj"/>
+                            <constraint firstItem="N3k-En-blr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="5" id="CGg-FQ-qjr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LXz-KA-Nhp" secondAttribute="trailing" constant="5" id="CyH-Yq-q9t"/>
+                            <constraint firstItem="PnW-uJ-BaW" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="15" id="EQ0-YT-b13"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PnW-uJ-BaW" secondAttribute="trailing" constant="5" id="QQy-jn-5ff"/>
+                            <constraint firstItem="ZO3-hc-gC5" firstAttribute="top" secondItem="1YD-Oa-NXS" secondAttribute="bottom" constant="8" symbolic="YES" id="TRe-W5-oFf"/>
+                            <constraint firstItem="A9A-ij-Bq3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="5" id="Zem-25-S6N"/>
+                            <constraint firstItem="n3X-hJ-NlW" firstAttribute="top" secondItem="N3k-En-blr" secondAttribute="bottom" constant="5" id="agN-YI-eiU"/>
+                            <constraint firstItem="gMu-Io-7wU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="5" id="bTG-96-3SS"/>
+                            <constraint firstItem="N3k-En-blr" firstAttribute="top" secondItem="LXz-KA-Nhp" secondAttribute="bottom" constant="5" id="d46-ZC-0ep"/>
+                            <constraint firstItem="N3k-En-blr" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" constant="5" id="fwk-0x-5Hp"/>
+                            <constraint firstItem="7GX-wU-IMY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="5" id="kdX-ov-Bz6"/>
+                            <constraint firstItem="n3X-hJ-NlW" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="5" id="lld-mf-Kx4"/>
+                            <constraint firstItem="1YD-Oa-NXS" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="5" id="q2H-Qy-Ssh"/>
+                            <constraint firstItem="1YD-Oa-NXS" firstAttribute="top" secondItem="A9A-ij-Bq3" secondAttribute="bottom" constant="5" id="q4X-lv-llr"/>
+                            <constraint firstItem="A9A-ij-Bq3" firstAttribute="top" secondItem="PnW-uJ-BaW" secondAttribute="bottom" constant="5" id="r0q-0n-BfA"/>
+                            <constraint firstItem="7GX-wU-IMY" firstAttribute="top" secondItem="n3X-hJ-NlW" secondAttribute="bottom" constant="5" id="y9e-G7-hoO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblConvertedShoeSize" destination="1YD-Oa-NXS" id="AL2-DG-mnL"/>
+                        <outlet property="lblConvertedWomenShoeSize" destination="n3X-hJ-NlW" id="NbO-IX-AYJ"/>
+                        <outlet property="txtMenShoeSize" destination="A9A-ij-Bq3" id="vaJ-bi-dFI"/>
+                        <outlet property="txtWomenShoeSize" destination="N3k-En-blr" id="lyG-Pi-TC8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
